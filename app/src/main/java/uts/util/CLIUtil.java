@@ -3,21 +3,27 @@ package uts.util;
 import java.util.Scanner;
 
 public class CLIUtil {
-    private static Scanner sc;
+    private static Scanner scanner;
 
     static {
-        sc = new Scanner(System.in);
+        scanner = new Scanner(System.in);
     }
 
     public static int getInt() {
-        return sc.nextInt();
+        return scanner.nextInt();
     }
 
-    public static double getDouble() {
-        return sc.nextDouble();
+    public static String getString() {
+        return scanner.nextLine();
     }
 
-    public static String getString(){
-        return sc.nextLine();
+    public static int askForInt(String message) {
+        System.out.println(message);
+        return scanner.nextInt();
+    }
+
+    public static String askForString(String message) {
+        System.out.println(message);
+        return scanner.nextLine();
     }
 }

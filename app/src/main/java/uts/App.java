@@ -3,9 +3,13 @@
  */
 package uts;
 
+import uts.views.KendaraanView;
+
 public class App {
 
     public static void main(String[] args) {
-        System.out.println("tes");
+        KendaraanView kendaraanView = new KendaraanView();
+
+        kendaraanView.render();
     }
 }
